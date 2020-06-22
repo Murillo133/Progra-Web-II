@@ -43,8 +43,9 @@
       <td>{{ vehicle.manufacturer }}</td>
       <td>{{ vehicle.mileage }}</td>
       <td><button type="button" class="btn btn-danger" (click)="delete(vehicle.id)" >Delete</button></td>
-      <td><button type="button" class="btn btn-success" (click)="editForm([vehicle.id,vehicle.color,vehicle.year,vehicle.manufacturer,vehicle.mileage])" >Edit</button></td>
-
+     <!-- <td><button type="button" class="btn btn-success" (click)="editForm([vehicle.id,vehicle.color,vehicle.year,vehicle.manufacturer,vehicle.mileage])" >Edit</button></td> -->
+      <td><button type="button" class="btn btn-success" (click)="editForm(vehicle, vehicle.id)" >Edit</button></td>
+      
     </tr>
   </tbody>
 </table>

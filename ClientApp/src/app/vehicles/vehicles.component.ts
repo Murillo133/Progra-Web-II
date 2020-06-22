@@ -43,17 +43,19 @@ export class VehiclesComponent {
     }, error => console.error(error));
   }
 
-  editForm(data:any){
+
+  editForm(vehiToEdit:Vehicle, id:string){
 
     this.showForm = true;
     this.show_edit_form = true;
-    this.id_edit_form = data[0];
-    this.vehicle.color = data[1];
-    this.vehicle.manufacturer = data[3];
-    this.vehicle.year = data[2];
-    this.vehicle.mileage = data[4];
+    this.id_edit_form = id;
+    this.vehicle.color = vehiToEdit.color;
+    this.vehicle.manufacturer = vehiToEdit.manufacturer;
+    this.vehicle.year = vehiToEdit.year;
+    this.vehicle.mileage = vehiToEdit.mileage;
 
   }
+
 
   update(id:string){
   
